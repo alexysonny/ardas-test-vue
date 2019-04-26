@@ -1,14 +1,14 @@
 <template>
   <ul>
-    <list-item/>
+    <tag-item />
   </ul>
 </template>
 
 <script>
-import ListItem from "./../components/listItem.vue";
+import TagItem from "./tagItem.vue";
 export default {
   components: {
-    ListItem
+    TagItem
   }
 };
 </script>
