@@ -4,6 +4,18 @@
   </div>
 </template>
 
+<script>
+import { mapActions } from "vuex";
+export default {
+  mounted() {
+    this.initApp();
+  },
+  methods: {
+    ...mapActions(["initApp"])
+  }
+};
+</script>
+
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
