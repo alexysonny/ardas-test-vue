@@ -1,15 +1,14 @@
 <template>
   <li class="list-item">
-    <list-item-heading :name="task.name" />
-    <tags-list :tags="task.tags" />
-    <div>
-      <effort-item
-        :title="constants.estimetedTime"
-        :time="task.estimated_effort"
-      />
-      <effort-item :title="constants.actualTime" :time="task.actual_effort" />
-    </div>
-    <date-component :date="task.due_date" />
+    <router-link :to="`/edit/${task.id}`" class="list-item__item">
+      <list-item-heading :name="task.name"/>
+      <tags-list :tags="task.tags"/>
+      <div>
+        <effort-item :title="constants.estimetedTime" :time="task.estimated_effort"/>
+        <effort-item :title="constants.actualTime" :time="task.actual_effort"/>
+      </div>
+      <date-component :date="task.due_date"/>
+    </router-link>
   </li>
 </template>
 
@@ -58,6 +57,10 @@ export default {
   margin-bottom: 15px;
   &:last-child {
     margin-bottom: 0;
+  }
+  &__item {
+    color: #000;
+    text-decoration: none;
   }
 }
 </style>
