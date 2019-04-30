@@ -6,10 +6,6 @@ export default {
   },
   getCurrentTask: state => {
     const { tasks, currentTaskId } = state;
-    let val = null;
-    if (currentTaskId !== -1) {
-      val = tasks[currentTaskId];
-    }
-    return val;
+    return currentTaskId !== -1 ? tasks[currentTaskId] : null;
   }
 };
