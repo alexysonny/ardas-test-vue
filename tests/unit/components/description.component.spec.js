@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import DescriptionComponent from "./../../src/components/description.component.vue";
+import DescriptionComponent from "./../../../src/components/description.component.vue";
 
 describe("Description component test", () => {
   it("Render default props when has no props", () => {

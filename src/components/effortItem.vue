@@ -7,11 +7,11 @@ export default {
   props: {
     title: {
       type: String,
-      datefault: ""
+      default: ""
     },
     time: {
       type: Number,
-      datefault: 0
+      default: 0
     }
   }
 };

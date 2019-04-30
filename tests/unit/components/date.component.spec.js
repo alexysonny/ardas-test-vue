@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import DateComponent from "./../../src/components/date.component.vue";
+import DateComponent from "./../../../src/components/date.component.vue";
 
 describe("Date component test", () => {
   it("Render default props.", () => {

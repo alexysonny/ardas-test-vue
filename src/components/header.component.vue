@@ -9,7 +9,6 @@
 export default {
   computed: {
     isShowBackBtn() {
-      console.log(this.$route);
       return this.$route.name === "edit";
     }
   }
