@@ -1,6 +1,17 @@
 module.exports = {
   moduleFileExtensions: ["js", "jsx", "json", "vue"],
   collectCoverage: true,
+  collectCoverageFrom: [
+    "**/*.{js,vue}",
+    "!**/node_modules/**",
+    "!**/*.config.*",
+    "!**/coverage/**",
+    "!**/constants/**",
+    "!**/unit/**",
+    "!**/.*.js",
+    "!.*.js",
+    "!**/(App|main|router).(js|vue)"
+  ],
   transform: {
     "^.+\\.vue$": "vue-jest",
     ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$":
