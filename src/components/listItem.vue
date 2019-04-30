@@ -1,13 +1,19 @@
 <template>
   <li class="list-item">
     <router-link :to="`/edit/${task.id}`" class="list-item__item">
-      <list-item-heading :name="task.name"/>
-      <tags-list :tags="task.tags"/>
+      <list-item-heading
+        :name="task.name"
+        :highPriority="task.is_high_priority"
+      />
+      <tags-list :tags="task.tags" />
       <div>
-        <effort-item :title="constants.estimetedTime" :time="task.estimated_effort"/>
-        <effort-item :title="constants.actualTime" :time="task.actual_effort"/>
+        <effort-item
+          :title="constants.estimetedTime"
+          :time="task.estimated_effort"
+        />
+        <effort-item :title="constants.actualTime" :time="task.actual_effort" />
       </div>
-      <date-component :date="task.due_date"/>
+      <date-component :date="task.due_date" />
     </router-link>
   </li>
 </template>
@@ -16,7 +22,7 @@
 import TagsList from "./tagsList.vue";
 import ListItemHeading from "./listItemHeading.vue";
 import EffortItem from "./effortItem.vue";
-import DateComponent from "./dateComponent.vue";
+import DateComponent from "./date.component.vue";
 export default {
   props: {
     task: {
@@ -51,7 +57,6 @@ export default {
 
 <style lang="scss">
 .list-item {
-  /* width: 100%; */
   border: solid #e4e4e4 1px;
   border-radius: 5px;
   margin-bottom: 15px;
@@ -61,6 +66,7 @@ export default {
   &__item {
     color: #000;
     text-decoration: none;
+    padding: 10px 5px;
   }
 }
 </style>

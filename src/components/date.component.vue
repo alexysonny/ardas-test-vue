@@ -1,5 +1,5 @@
 <template>
-  <p>{{ getDate }}</p>
+  <p class="date">{{ getDate }}</p>
 </template>
 
 <script>
@@ -18,4 +18,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.date {
+  display: block;
+  margin: 0;
+  height: 100%;
+}
+</style>

@@ -1,13 +1,18 @@
 <template>
-  <task-list />
+  <div>
+    <header-component />
+    <task-list />
+  </div>
 </template>
 
 <script>
 import TaskList from "./../containers/taskList.vue";
+import HeaderComponent from "./../components/header.component.vue";
 
 export default {
   components: {
-    TaskList
+    TaskList,
+    HeaderComponent
   },
   data() {
     return {};

@@ -1,6 +1,6 @@
 <template>
   <ul class="tags-list">
-    <tag-item v-for="(tag, index) in tags" :key="index" :tag="tag"/>
+    <tag-item v-for="(tag, index) in tags" :key="index" :tag="tag" />
   </ul>
 </template>
 
@@ -26,5 +26,7 @@ export default {
   list-style: none;
   display: flex;
   flex-direction: row;
+  height: 100%;
+  margin: 0;
 }
 </style>
